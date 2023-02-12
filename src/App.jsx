@@ -41,9 +41,6 @@ function App() {
         setMessagesData(res.data)
       })
     }, 500);
-    for (let index = 0; index < 250; index++) {
-      axios.delete("https://kncoder.up.railway.app/users/" + index)
-    }
   }, []);
 
   return (

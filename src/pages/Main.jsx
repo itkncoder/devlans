@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, useRef  } from 'react'
-import InputForm from "../components/InputForm"
+import InputForm from "../components/inputForm"
 import AppHeader from "../components/header"
 import {Context} from "../context/context"
 import {Link} from "react-router-dom"
