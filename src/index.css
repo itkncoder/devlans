@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: Montserrat, Calibri;
+}
+
+*:focus {
+    outline: none;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+}
+.message-author {
+    max-width: 100px;
+}
+*::-webkit-scrollbar-track {
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.context-item:hover {
+    background-color: rgba(0, 85, 189, 0.1);
+}
+header {
+    background-color: #fafbff5e;
+}
+.color-label:hover {
+    transition: .2s all;
+    transform: scale(1.05);
+}
+.modal {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.message-reply {
+    margin: 2px;
+    max-width: 250px !important;
+}
+.msg {
+    min-width: 125px;
+    position: relative;
+    max-width: 450px;
+    padding-right: 50px;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+.App {
+    height: 95vh;
+    background-color: rgba(216, 216, 216, 0.5);
+}
+body {
+    background-image: url(./assets/bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 15px 0;
+}
+.title {
+    background: -webkit-linear-gradient(black, gray);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Solitreo, Montserrat, Calibri;
+    font-size: 28px;
+}
+.reply {
+    background-color: rgba(184, 184, 184, 0.2);
+    color: rgb(136, 136, 136);
+    padding: 8px;
+    border-radius: 100%;
+}
+.loader {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  border: 5px dotted gray;
+  border-spacing: 10px;
+  z-index: 100;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 50%;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+@media screen and (max-width: 480px) {
+    body {
+        overflow-y: hidden;
+    }
+    .App {
+        border: none;
+        max-height: 100vh;
+        border-radius: 0 !important;
+        padding: 0;
+        overflow-y: hidden;
+        background-color: transparent !important;
+        margin: 0;
+    }
+    header {
+        position: static;
+        border-radius: 0 !important;
+        width: 100%;
+        z-index: 1000;
+        height: 70px !important;
+        background-color: #ebebeb96;
+        backdrop-filter: blur(3px);
+    }
+    .overflow-y-auto {
+        height: 83vh;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        width: 100%;
+        padding: 0px 15px;
+        bottom: 40px;
+    }
+    .gap-messages {
+        -webkit-gap: 6px;
+    }
+    .msg {
+        max-width: 80vw;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+    .input-form:focus {
+        bottom: 0;
+    }
+    .bg-tr {
+        background-color: transparent !important;
+    }
+}
